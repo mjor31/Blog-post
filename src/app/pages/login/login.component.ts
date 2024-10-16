@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  showPassword: boolean=false;
+
+  get passwordFieldType(): string {
+    return this.showPassword ? 'text' : 'password';
+  }
+
+  // Toggle the password visibility
+  togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
+  }
+
+
 }
